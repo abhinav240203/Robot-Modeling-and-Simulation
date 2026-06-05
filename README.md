@@ -18,14 +18,17 @@ This project demonstrates the workflow of designing a custom mobile robot, defin
 
 ```
 robot_ws/
+├── images/                      # Gazebo + RViz screenshots for documentation
+│
 ├── src/
-│   ├── robot_cpp/
+│   ├── robot_cpp/               # C++ nodes for control / parameters
 │   │   ├── include/
 │   │   ├── src/
+│   │   │   └── simple_parameter.cpp
 │   │   ├── CMakeLists.txt
 │   │   └── package.xml
 │   │
-│   ├── robot_description/
+│   ├── robot_description/       # Robot model, URDF, meshes, launch files
 │   │   ├── launch/
 │   │   │   ├── display.launch.py
 │   │   │   └── gazebo.launch.py
@@ -44,15 +47,18 @@ robot_ws/
 │   │   ├── CMakeLists.txt
 │   │   └── package.xml
 │   │
-│   └── robot_py/
-│       ├── resource/
-│       ├── robot_py/
-│       ├── test/
-│       ├── setup.py
-│       ├── setup.cfg
-│       └── package.xml
+│   ├── robot_py/                # Python ROS 2 utilities
+│   │   ├── resource/
+│   │   ├── robot_py/
+│   │   │   ├── __init__.py
+│   │   │   └── simple_parameters.py
+│   │   ├── test/
+│   │   ├── setup.py
+│   │   ├── setup.cfg
+│   │   └── package.xml
 │
-└── .vscode/
+├── .gitignore                   # Ignore build, install, log, vscode, pycache
+
 ```
 
 ## 🤖 Robot Overview
